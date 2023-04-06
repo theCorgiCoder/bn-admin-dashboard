@@ -1,5 +1,13 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 *{
     border: 1px solid red;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+:root {
+    --dashboard-color: #3dccc7;
+    --white-color: #ffffff;
 }
 
 body {
@@ -11,26 +19,70 @@ body {
     grid-template-rows: repeat(4, 1fr);
 }
 
+/**** HEADER STYLES ****/
+
 .profile_header {
     grid-column: 2 / -1;
     grid-row: 1 /2
 }
 
+/**** DASHBOARD STYLES ****/
+
 .dashboard {
     grid-column: 1/ 2;
     grid-row: 1 / -1;
+    background-color: var(--dashboard-color);
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 25px;
+}
+
+#dash_main {
+   grid-row: span 3;
+}
+
+#dash_main > .menu_title{
+    font-size: 2rem;
+    margin: 0;
+}
+
+#dash_main > .nav_icon{
+    height: 2.5em;
+    grid-column: 2 / 3;
+}
+
+.link {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-decoration: none;
+    justify-items: start;
+    align-items: center;
+    
+}
+
+.nav_icon{
+    height: 1.3em;
+    grid-column: 2 /3;
+}
+
+.menu_title {
+    color: var(--white-color);
+    grid-column: 3 / -1;
+    font-size: 1.2rem;
+    margin: 0;
+
 }
 
 .main_content {
     grid-column: 2 / -1;
     grid-row: 2 / -1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
 }
 
 .projects {
     grid-column: 1/ 3;
     grid-row: 1 / -1;
-
 }
