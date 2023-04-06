@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 *{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: "Roboto Condensed", sans-serif;
 }
 
 :root {
     --dashboard-color: #3dccc7;
     --white-color: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;;
 }
 
 body {
@@ -21,10 +22,58 @@ body {
 
 /**** HEADER STYLES ****/
 
-.profile_header {
+.profile-header {
     grid-column: 2 / -1;
-    grid-row: 1 /2
+    background-color: var(--white-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 65px 1fr;
+    box-shadow: var(--shadow);
 }
+
+.container.top-left {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+}
+
+.container.top-left > input {
+  border-radius: 20px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  padding-left: 15px;
+  border: none;
+  background-color: #4caca943;
+}
+
+.container.top-left > input::placeholder {
+  color: var(--white-color);
+  font-style: italic;
+}
+
+.header-icon {
+  width: 1.3em;
+  justify-self: center;
+}
+
+.container.top-right {
+  display: grid;
+  grid-template-columns: 1fr 50px 100px 100px 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.container.top-right > .header-icon {
+  grid-column: 2 / 3;
+}
+
+.profile-img {
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
 
 /**** DASHBOARD STYLES ****/
 
@@ -32,6 +81,7 @@ body {
     grid-column: 1/ 2;
     grid-row: 1 / -1;
     background-color: var(--dashboard-color);
+    box-shadow: var(--shadow);
 }
 
 nav {
@@ -61,7 +111,6 @@ nav {
     text-decoration: none;
     justify-items: start;
     align-items: center;
-    
 }
 
 .nav_icon{
@@ -74,7 +123,6 @@ nav {
     grid-column: 3 / -1;
     font-size: 1.2rem;
     margin: 0;
-
 }
 
 .main_content {
