@@ -5,11 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
     <title>Admin Dashboard</title>
   </head>
   <body>
-    <header class="profile_header"></header>
+    <header class="profile-header">
+      <section class="container top-left">
+        <img src="./assets/icons/search.svg" alt="" class="header-icon">
+        <input type="search" name="search" id="search" placeholder="search...">
+      </section>
+      <section class="container top-right">
+        <img src="./assets/icons/notification_bell.svg" alt="" class="header-icon">
+        <picture class="profile">
+          <img src="./assets/profile-images/elaine_profile.jpg" alt="" class="profile-img">
+        </picture>
+        <p>Alfie Bergström</p>
+      </section>
+      <section class="container bottom-left">
+        <picture class="profile">
+          <img src="./assets/profile-images/elaine_profile.jpg" alt="" class="profile-img">
+        </picture>
+        <p>
+          <span>Hi there,</span>
+          <br>
+          Alfie Bestboi (@alfie)
+        </p>
+      </section>
+      <section class="container bottom-right">
+        <button class="header-button">
+          New
+        </button>
+        <button class="header-button">
+          Upload
+        </button>
+        <button class="header-button">
+          Share
+        </button>
+      </section>
+    </header>
     <aside class="dashboard">
       <nav>
         <a href="#" class="link" id="dash_main">
@@ -74,7 +106,6 @@
         </a>
       </nav>
     </aside>
-    
     <main class="main_content">
       <section class="projects">
         <h2 class="projects-title">Projects</h2>
@@ -490,7 +521,6 @@
           </div>
         </div>
       </section>
-
       <section class="trending"></section>
     </main>
   </body>
