@@ -1,80 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
-*{
-    border: 1px solid red;
-    font-family: "Roboto Condensed", sans-serif;
+* {
+  /*border: 1px solid red;*/
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 :root {
-    --dashboard-color: #3dccc7;
-    --white-color: #ffffff;
+  --dashboard-color: #3dccc7;
+  --white-color: #ffffff;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    background-color: #e2e8f0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: #e2e8f0;
 }
 
 /**** HEADER STYLES ****/
 
 .profile_header {
-    grid-column: 2 / -1;
-    grid-row: 1 /2
+  grid-column: 2 / -1;
+  grid-row: 1 /2;
 }
 
 /**** DASHBOARD STYLES ****/
 
 .dashboard {
-    grid-column: 1/ 2;
-    grid-row: 1 / -1;
-    background-color: var(--dashboard-color);
+  grid-column: 1/ 2;
+  grid-row: 1 / -1;
+  background-color: var(--dashboard-color);
 }
 
 nav {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(15, 1fr);
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  gap: 25px;
 }
 
 #dash_main {
-   grid-row: span 3;
+  grid-row: span 3;
 }
 
-#dash_main > .menu_title{
-    font-size: 2rem;
-    margin: 0;
+#dash_main > .menu_title {
+  font-size: 2rem;
+  margin: 0;
 }
 
-#dash_main > .nav_icon{
-    height: 2.5em;
-    grid-column: 2 / 3;
+#dash_main > .nav_icon {
+  height: 2.5em;
+  grid-column: 2 / 3;
 }
 
 .link {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    text-decoration: none;
-    justify-items: start;
-    align-items: center;
-    
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-decoration: none;
+  justify-items: start;
+  align-items: center;
 }
 
-.nav_icon{
-    height: 1.3em;
-    grid-column: 2 /3;
+.nav_icon {
+  height: 1.3em;
+  grid-column: 2 /3;
 }
 
 .menu_title {
-    color: var(--white-color);
-    grid-column: 3 / -1;
-    font-size: 1.2rem;
-    margin: 0;
-
+  color: var(--white-color);
+  grid-column: 3 / -1;
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .main_content {
@@ -83,6 +81,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .projects {
@@ -111,6 +110,11 @@ nav {
   display: grid;
   background-color: white;
   box-shadow: 5px 5px 10px #ccd1d8;
+}
+
+.project:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.02);
 }
 
 .project span {
@@ -144,6 +148,19 @@ nav {
   grid-row: 3;
 }
 
+.star-icon,
+.eye-icon,
+.share-icon {
+  cursor: pointer;
+}
+
+.star-icon:hover,
+.eye-icon:hover,
+.share-icon:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.1);
+}
+
 .star-icon {
   grid-column: 1;
   grid-row: 1;
@@ -163,4 +180,68 @@ nav {
 
 /* announcements section start */
 
+.announcements {
+  grid-column: 3 / 4;
+  padding: 20px;
+}
+
+.announcements-container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px #ccd1d8;
+}
+
+.announcements-container span {
+  margin: 0 auto;
+  width: 90%;
+  height: 1px;
+  background-color: gray;
+}
+
 /* announcements section end */
+
+/* trending section start */
+
+.trending {
+  grid-column: 3 / 4;
+  display: grid;
+  padding: 20px;
+}
+
+.trending-container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: repeat(3, 1fr);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px #ccd1d8;
+}
+
+.trending-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.trending-content p,
+.trending-content h4 {
+  line-height: 0;
+}
+
+.trending-img {
+  grid-row: 1;
+  grid-column: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.trending-content {
+  grid-row: 1;
+  grid-column: 2;
+}
+/* trending section end */
