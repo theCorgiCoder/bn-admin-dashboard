@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 *{
-    /* border: 1px solid red; */
     font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -26,7 +25,7 @@ body {
     grid-column: 2 / -1;
     background-color: var(--white-color);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(300px, 2fr) 1fr;
     grid-template-rows: 65px 1fr;
     box-shadow: var(--shadow);
 }
@@ -58,22 +57,58 @@ body {
 
 .container.top-right {
   display: grid;
-  grid-template-columns: 1fr 50px 100px 100px 1fr;
+  grid-template-columns: repeat(3, 100px);
   justify-items: center;
   align-items: center;
 }
 
 .container.top-right > .header-icon {
-  grid-column: 2 / 3;
+ justify-self: end;
 }
 
 .profile-img {
-  width: 50px;
+  width: 45px;
   border-radius: 50%;
   object-fit: cover;
 }
 
+.container.bottom-left {
+  display: grid;
+  grid-template-columns: 125px 2fr;
+  justify-items: center;
+  align-items: center;
+}
 
+.container.bottom-left > .profile-text {
+  justify-self: start;
+  font-size: 1.5rem;
+}
+
+.container.bottom-left > .profile-text span {
+  font-size: 0.9rem;
+}
+
+.container.bottom-left > picture > img {
+  width: 70px;
+}
+
+.container.bottom-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
+  align-items: center;
+}
+
+.container.bottom-right > .header-button {
+  background-color: var(--dashboard-color);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 2em;
+  width: 80px;
+  font-size: 1rem;
+  color: var(--white-color)
+}
 
 /**** DASHBOARD STYLES ****/
 
