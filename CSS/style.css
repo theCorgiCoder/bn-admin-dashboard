@@ -50,13 +50,27 @@ body {
 }
 
 .container.top-left > input::placeholder {
-  color: var(--white-color);
+  color: black;
   font-style: italic;
+}
+
+.container.top-left > input:focus {
+  outline: 1px solid black;
+}
+
+.container.top-left > input:focus::placeholder {
+  color: transparent;
 }
 
 .header-icon {
   width: 1.3em;
   justify-self: center;
+  cursor: pointer;
+}
+
+.header-icon:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.1);
 }
 
 .container.top-right {
@@ -98,7 +112,7 @@ body {
 
 .container.bottom-right {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-items: start;
   align-items: center;
 }
@@ -112,6 +126,14 @@ body {
   width: 80px;
   font-size: 1rem;
   color: var(--white-color);
+  cursor: pointer;
+}
+
+.container.bottom-right > .header-button:hover {
+  transition: 0.3s ease-out;
+  color: var(--dashboard-color);
+  background-color: var(--white-color);
+  outline: 1px solid black;
 }
 
 /**** DASHBOARD STYLES ****/
@@ -165,6 +187,11 @@ nav {
   margin: 0;
 }
 
+.menu_title:hover {
+  transition: 0.3s ease-out;
+  color: black;
+}
+
 .main_content {
   grid-column: 2 / -1;
   grid-row: 2 / -1;
@@ -183,8 +210,9 @@ nav {
 /* projects section start */
 
 .projects-title {
+  margin: 0;
   padding-left: 20px;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 .project-container {
@@ -274,6 +302,7 @@ nav {
 .announcements {
   grid-column: 3 / 4;
   padding: 20px;
+  padding-left: 0;
 }
 
 .announcements-container {
@@ -299,8 +328,13 @@ nav {
 
 .trending {
   grid-column: 3 / 4;
-  display: grid;
   padding: 20px;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.trending-title {
+  margin-top: 0;
 }
 
 .trending-container {
@@ -311,6 +345,7 @@ nav {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 5px 5px 10px #ccd1d8;
+  justify-content: start;
 }
 
 .trending-card {
