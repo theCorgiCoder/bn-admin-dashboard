@@ -67,10 +67,13 @@ body {
 .header-icon {
   width: 1.3em;
   justify-self: center;
+}
+
+.header-icon.bell {
   cursor: pointer;
 }
 
-.header-icon:hover {
+.header-icon.bell:hover {
   transition: 0.3s ease-out;
   transform: scale(1.1);
 }
@@ -90,6 +93,11 @@ body {
   width: 45px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.profile-img:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.1);
 }
 
 .container.bottom-left {
