@@ -163,16 +163,16 @@ nav {
   gap: 25px;
 }
 
-#dash_main {
+#dash-main {
   grid-row: span 3;
 }
 
-#dash_main > .menu_title {
+#dash-main > .menu-title {
   font-size: 2rem;
   margin: 0;
 }
 
-#dash_main > .nav_icon {
+#dash-main > .nav-icon {
   height: 2.5em;
   grid-column: 2 / 3;
 }
@@ -186,24 +186,24 @@ nav {
   cursor: pointer;
 }
 
-.link:hover > .menu_title {
+.link:hover > .menu-title {
   transition: 0.3s ease-out;
   color: black;
 }
 
-.nav_icon {
+.nav-icon {
   height: 1.3em;
   grid-column: 2 /3;
 }
 
-.menu_title {
+.menu-title {
   color: var(--white-color);
   grid-column: 3 / -1;
   font-size: 1.2rem;
   margin: 0;
 }
 
-.main_content {
+.main-content {
   grid-column: 2 / -1;
   grid-row: 2 / -1;
   display: grid;
