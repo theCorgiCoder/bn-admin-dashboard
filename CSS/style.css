@@ -228,8 +228,8 @@ nav {
 .project-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
-  padding: 20px;
-  gap: 30px;
+  padding: 1.2em;
+  gap: 20px;
 }
 
 .project {
@@ -257,7 +257,7 @@ nav {
 .project-content {
   display: grid;
   grid-column: 2;
-  padding: 10px;
+  padding: 1.2em;
 }
 
 .project-header {
@@ -266,6 +266,7 @@ nav {
 }
 
 .project-text {
+  font-size: 0.9rem;
   grid-column: 1/3;
   grid-row: 2;
 }
@@ -310,7 +311,7 @@ nav {
 /* announcements section start */
 
 .announcements {
-  grid-column: 3 / 4;
+  /* grid-column: 3 / 4; */
   padding: 20px;
   padding-left: 0;
 }
