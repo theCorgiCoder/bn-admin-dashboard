@@ -3,6 +3,7 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
+/** GLOBAL STYLES **/
 :root {
   --dashboard-color: #3dccc7;
   --white-color: #ffffff;
@@ -107,7 +108,7 @@ body {
   font-size: 0.9rem;
 }
 
-.container.bottom-left > picture > img {
+.container.bottom-left > picture > a > .profile-img {
   width: 70px;
 }
 
@@ -193,11 +194,6 @@ nav {
   font-size: 1.2rem;
   margin: 0;
 }
-
-/* .menu_title:hover {
-  transition: 0.3s ease-out;
-  color: black;
-} */
 
 .main_content {
   grid-column: 2 / -1;
