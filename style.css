@@ -171,6 +171,7 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   max-width: 100%;
+  gap: 20px;
 }
 
 .projects {
@@ -199,6 +200,11 @@ nav {
   display: grid;
   background-color: white;
   box-shadow: 5px 5px 10px #ccd1d8;
+}
+
+.project:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.02);
 }
 
 .project span {
@@ -232,6 +238,19 @@ nav {
   grid-row: 3;
 }
 
+.star-icon,
+.eye-icon,
+.share-icon {
+  cursor: pointer;
+}
+
+.star-icon:hover,
+.eye-icon:hover,
+.share-icon:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.1);
+}
+
 .star-icon {
   grid-column: 1;
   grid-row: 1;
@@ -251,4 +270,68 @@ nav {
 
 /* announcements section start */
 
+.announcements {
+  grid-column: 3 / 4;
+  padding: 20px;
+}
+
+.announcements-container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px #ccd1d8;
+}
+
+.announcements-container span {
+  margin: 0 auto;
+  width: 90%;
+  height: 1px;
+  background-color: gray;
+}
+
 /* announcements section end */
+
+/* trending section start */
+
+.trending {
+  grid-column: 3 / 4;
+  display: grid;
+  padding: 20px;
+}
+
+.trending-container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: repeat(3, 1fr);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px #ccd1d8;
+}
+
+.trending-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.trending-content p,
+.trending-content h4 {
+  line-height: 0;
+}
+
+.trending-img {
+  grid-row: 1;
+  grid-column: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.trending-content {
+  grid-row: 1;
+  grid-column: 2;
+}
+/* trending section end */
