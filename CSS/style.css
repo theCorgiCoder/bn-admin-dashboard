@@ -372,12 +372,13 @@ nav {
 .trending-card {
   display: grid;
   grid-template-columns: 50px 1fr;
+  align-items: center;
 }
 
 .trending-content p,
 .trending-content h4 {
   margin: 0 0 0 1.2em;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   word-wrap: break-word;
 }
 
