@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
-* {
-  /*border: 1px solid red;*/
-  font-family: "Roboto Condensed", sans-serif;
+*{
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 :root {
-  --dashboard-color: #3dccc7;
-  --white-color: #ffffff;
+    --dashboard-color: #3dccc7;
+    --white-color: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;;
 }
 
 body {
@@ -21,17 +21,102 @@ body {
 
 /**** HEADER STYLES ****/
 
-.profile_header {
-  grid-column: 2 / -1;
-  grid-row: 1 /2;
+.profile-header {
+    grid-column: 2 / -1;
+    background-color: var(--white-color);
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) 1fr;
+    grid-template-rows: 65px 1fr;
+    box-shadow: var(--shadow);
+}
+
+.container.top-left {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+}
+
+.container.top-left > input {
+  border-radius: 20px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  padding-left: 15px;
+  border: none;
+  background-color: #4caca943;
+}
+
+.container.top-left > input::placeholder {
+  color: var(--white-color);
+  font-style: italic;
+}
+
+.header-icon {
+  width: 1.3em;
+  justify-self: center;
+}
+
+.container.top-right {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  justify-items: center;
+  align-items: center;
+}
+
+.container.top-right > .header-icon {
+ justify-self: end;
+}
+
+.profile-img {
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.container.bottom-left {
+  display: grid;
+  grid-template-columns: 125px 2fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.container.bottom-left > .profile-text {
+  justify-self: start;
+  font-size: 1.5rem;
+}
+
+.container.bottom-left > .profile-text span {
+  font-size: 0.9rem;
+}
+
+.container.bottom-left > picture > img {
+  width: 70px;
+}
+
+.container.bottom-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
+  align-items: center;
+}
+
+.container.bottom-right > .header-button {
+  background-color: var(--dashboard-color);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 2em;
+  width: 80px;
+  font-size: 1rem;
+  color: var(--white-color)
 }
 
 /**** DASHBOARD STYLES ****/
 
 .dashboard {
-  grid-column: 1/ 2;
-  grid-row: 1 / -1;
-  background-color: var(--dashboard-color);
+    grid-column: 1/ 2;
+    grid-row: 1 / -1;
+    background-color: var(--dashboard-color);
+    box-shadow: var(--shadow);
 }
 
 nav {
@@ -56,11 +141,11 @@ nav {
 }
 
 .link {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  text-decoration: none;
-  justify-items: start;
-  align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-decoration: none;
+    justify-items: start;
+    align-items: center;
 }
 
 .nav_icon {
@@ -69,10 +154,10 @@ nav {
 }
 
 .menu_title {
-  color: var(--white-color);
-  grid-column: 3 / -1;
-  font-size: 1.2rem;
-  margin: 0;
+    color: var(--white-color);
+    grid-column: 3 / -1;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 .main_content {
