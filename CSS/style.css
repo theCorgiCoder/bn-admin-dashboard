@@ -6,6 +6,7 @@
 :root {
   --dashboard-color: #3dccc7;
   --white-color: #ffffff;
+  --soft-black-color: #4d4d4d;
   --shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
 }
 
@@ -50,12 +51,12 @@ body {
 }
 
 .container.top-left > input::placeholder {
-  color: black;
+  color: var();
   font-style: italic;
 }
 
 .container.top-left > input:focus {
-  outline: 1px solid black;
+  outline: 1px solid var(--soft-black-color);
 }
 
 .container.top-left > input:focus::placeholder {
@@ -133,7 +134,7 @@ body {
   transition: 0.3s ease-out;
   color: var(--dashboard-color);
   background-color: var(--white-color);
-  outline: 1px solid black;
+  outline: 1px solid var(--black-color);
 }
 
 /**** DASHBOARD STYLES ****/
@@ -173,6 +174,12 @@ nav {
   text-decoration: none;
   justify-items: start;
   align-items: center;
+  cursor: pointer;
+}
+
+.link:hover > .menu_title {
+  transition: 0.3s ease-out;
+  color: black;
 }
 
 .nav_icon {
@@ -187,10 +194,10 @@ nav {
   margin: 0;
 }
 
-.menu_title:hover {
+/* .menu_title:hover {
   transition: 0.3s ease-out;
   color: black;
-}
+} */
 
 .main_content {
   grid-column: 2 / -1;
