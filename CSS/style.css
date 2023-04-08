@@ -226,7 +226,7 @@ nav {
 
 .project-container {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
   padding: 1.2em;
   gap: 25px;
@@ -312,7 +312,7 @@ nav {
 
 .notifications {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
   padding: 1.2em;
   margin-right: 1.5em;
   justify-items: start;
@@ -320,6 +320,7 @@ nav {
 
 .announcements {
   max-height: 50%;
+  grid-row: 1 / 2;
 }
 
 .announcements-container {
@@ -356,16 +357,17 @@ nav {
 /* trending section start */
 
 .trending {
-  max-width: 100%;
+  grid-row: 2 / -1;
+  width: 100%;
 }
 
 .trending-container {
   display: grid;
   gap: 15px;
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 1.2em;
   box-shadow: 5px 5px 10px #ccd1d8;
 }
 
